@@ -1,7 +1,7 @@
 add_newline = false
 
 # A minimal left prompt
-format = """$python$directory$character"""
+format = """$python$username$hostname$directory$character"""
 
 # move the rest of the prompt to the right
 right_format = """$git_status$git_branch$git_state$cmd_duration"""
@@ -104,3 +104,14 @@ disabled = false
 format = '[$time]($style) '
 time_format = '%H:%M:%S'
 style = 'brblack'
+
+[username]
+show_always = false
+style_root = 'bold dimmed red'
+style_user = 'bold dimmed green'
+format = '[$user]($style)@'
+
+[hostname]
+ssh_only = true
+style = 'bold dimmed green'
+format = '[$hostname]($style):'
